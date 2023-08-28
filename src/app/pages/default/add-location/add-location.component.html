@@ -1,0 +1,23 @@
+<div class="mt-5">
+    <form action="" [formGroup]="locationForm" (ngSubmit)="onSubmit()" class="w-50 m-auto">
+        <div>
+
+            <label for="lat">Lat :</label>
+            <input type="text" name="" formControlName="lat" class="form-control" id="lat"
+            [ngClass]=" {'is-invalid': f['lat'].errors&& isSubmitted }">
+            <div *ngIf="f['lat'].errors&&isSubmitted">
+                <small *ngIf="f['lat'].errors['required']" class="text-danger">lat required</small>
+            </div>
+        </div>
+        <div>
+
+            <label for="lon">Lon :</label>
+            <input type="text" name="" formControlName="lon" class="form-control" id="lon"
+            [ngClass]=" {'is-invalid': f['lon'].errors&& isSubmitted }">
+            <div *ngIf="f['lon'].errors&&isSubmitted">
+                <small *ngIf="f['lon'].errors['required']" class="text-danger">lon required</small>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-info mt-2">Submit</button>
+    </form>
+</div>
