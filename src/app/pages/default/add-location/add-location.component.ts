@@ -38,7 +38,7 @@ export class AddLocationComponent implements OnInit {
 this.locationService.getLocation(this.locationForm.value.lat,this.locationForm.value.lon).subscribe({
   next:(res:any)=>{
 
-    console.log(res);
+  this.locationService.currentLocation$.next(res);
     
   },error:(err:any)=>{
     console.log(err);

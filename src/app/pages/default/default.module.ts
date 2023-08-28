@@ -6,13 +6,15 @@ import { HomeComponent } from './home/home.component';
 import { TaskComponent } from './task/task.component';
 import { AddLocationComponent } from './add-location/add-location.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LocationsComponent } from './locations/locations.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     TaskComponent,
-    AddLocationComponent
+    AddLocationComponent,
+    LocationsComponent
   ],
   imports: [
     CommonModule,

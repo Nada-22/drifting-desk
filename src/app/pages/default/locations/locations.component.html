@@ -1,0 +1,19 @@
+<table class="table" *ngIf="locations.length">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">temp</th>
+        <th scope="col">temp max</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let location of locations;let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{location.name}}</td>
+        <td>{{location.main.temp}}</td>
+        <td>{{location.main.temp_max}}</td>
+      </tr>
+    
+    </tbody>
+  </table>

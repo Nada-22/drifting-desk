@@ -1,5 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -9,6 +10,7 @@ export class LocationService {
 
   API_URL=environment.API_URL;
   API_KEY=environment.API_KEY;
+  currentLocation$=new Subject();
   constructor(private http:HttpClient ) { }
 
 
