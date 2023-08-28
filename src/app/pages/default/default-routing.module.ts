@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TestComponent } from './test/test.component';
 import { HomeComponent } from './home/home.component';
+import { TaskComponent } from './task/task.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
-  { path: 'test', component: TestComponent },
+  { path: 'task', component: TaskComponent },
   
 ];
 
